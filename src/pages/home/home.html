@@ -7,18 +7,27 @@
 </ion-header>
 
 <ion-content padding>
-  
-  <ion-list>
+   <ion-list>
 
     <ion-item>
       <ion-label fixed>Number</ion-label>
-      <ion-input type="text" value="" [(ngModel)]="num"></ion-input>
+      <ion-input type="text" value="'737628064502'" [(ngModel)]="num"></ion-input>
     </ion-item>
+    <ion-item>
+        <button ion-button (click)="getData(num)">get data</button>
+      </ion-item>
 
     <ion-item>
-      <button ion-button (click)="scan()">Button</button>
+      <button ion-button (click)="scan()">scan</button>
     </ion-item>
-  
+    <ion-item>
+      <button ion-button (click)="getData('737628064502')">exemple object</button>
+    </ion-item>
+    <ngx-json-viewer [json]="res"></ngx-json-viewer>
   </ion-list>
 
+  
+
 </ion-content>
+
+
